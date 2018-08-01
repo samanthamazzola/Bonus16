@@ -12,9 +12,7 @@ namespace Bonus16
         public static void Main(string[] args)
         {
             // List of Cars you build
-            List<Car> cars = new List<Car>(7); // empty list you're adding to
-
-            CarLot gc = new CarLot(); //carlot list
+            List<Car> cars = new List<Car>(); // empty list you're adding to
 
             // create objects because not asking for input, and the vars are initialized with data below
             // can list a string, but will pass an int so user can select vehicle by number on list to get info
@@ -24,7 +22,7 @@ namespace Bonus16
             UsedCar u1 = new UsedCar("Cadillac", "XT5", 2017, 35000, 35987.6);
             UsedCar u2 = new UsedCar("BMW", "i8", 2017, 90000, 50432.8);
             UsedCar u3 = new UsedCar("Range Rover", "Sport", 2017, 82000, 60342.8);
-           
+
             cars.Add(c1);
             cars.Add(c2);
             cars.Add(c3);
@@ -32,7 +30,8 @@ namespace Bonus16
             cars.Add(u2);
             cars.Add(u3);
 
-            CarLot carlotlist = new CarLot(cars); //
+            CarLot carlotlist = new CarLot(cars); // create CarList from Car list info
+
 
 
 
@@ -43,40 +42,40 @@ namespace Bonus16
 
                 Console.WriteLine("Current Inventory: ");
 
-                if (cars.Count() == 0) // no inventory on list 
+                if (carlotlist.Lot.Count() == 0) //newlist, then Class, then listing out the number of availible cars 
                 {
                     Console.WriteLine("Sorry, we're sold out!");
                 }
                 else // if they choose a number of the inventory greater than 0
                 {
-                    foreach (Car c in cars) // for each listed item that was stored, print info input
+                    foreach (Car c in carlotlist.Lot) // for each listed item that was stored, print info input
                     {
-                        Console.WriteLine($"{cars.IndexOf(c) + 1,1}: {c.Year,-5} {c.Make,-5} {c.Model,-5}");
+                        Console.WriteLine($"{carlotlist.Lot.IndexOf(c) + 1,1}: {c.Year,-5} {c.Make,-5} {c.Model,-5}");
                     }
                     Console.WriteLine("=================================");
                     Console.WriteLine("Please choose a vehicle number from the list above: ");
                 }
-                if (cars.Count() > 0)
+                if (carlotlist.Lot.Count() > 0) //if you still have inventory 
                 {
                     try
                     {
                         string input = Console.ReadLine();
-                        foreach (Car c in cars) // for each listed item that was stored, print info input
+                        foreach (Car c in carlotlist.Lot) // for each listed item that was stored, print info input
                         {
-                            if (cars.IndexOf(c) + 1 == int.Parse(input))
+                            if (carlotlist.Lot.IndexOf(c) + 1 == int.Parse(input)) // +1 becaues not index 0
                             {
                                 c.PrintInfo();
                                 Console.WriteLine();
                             }
                         }
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
-                     // if no add an exception
+                        // if no add an exception
                     }
                 }
                 Console.WriteLine("Do you want to view another car? Y/N");
-                    string choice = Console.ReadLine();
+                string choice = Console.ReadLine();
                 if (choice.ToLower() == "n") //so it doesn't matter if it's lower case or uppper case input
                     break;
 
@@ -86,11 +85,8 @@ namespace Bonus16
                 Console.WriteLine("Make Model Year Price Mileage");
                 Console.WriteLine("===== ===== ===== ===== =====");
 
-                foreach (Car c in cars) // for each listed item that was stored
-                {
-                    c.ToString();
-                }
-                foreach (Car c in cars) // for each listed item that was stored, print info input
+      
+                foreach (Car c in carlotlist.Lot) // for each listed item that was stored, print info input
                 {
                     c.PrintInfo();
                 }

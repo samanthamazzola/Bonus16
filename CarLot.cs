@@ -6,10 +6,10 @@ namespace Bonus16
 {
     public class CarLot
     {
-       // private List<Car> lot; //private create list of Car class 
+        private List<Car> lot; //private create list of Car class 
 
         //properties
-        public List<Car> Lot
+        public List<Car> Lot //taking in Car class list and passing Lot list
         {
             set;
             get;
