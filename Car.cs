@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bonus16
 {
-    class Car
+    public class Car
     {
 
         // Fields
@@ -67,8 +67,11 @@ namespace Bonus16
         // virtual method
 
 
-        public virtual void
-  ToString()
+        public virtual void ToString()
+        {
+            Console.WriteLine($"{Make,-15} {Model,-15} {Year,-15} {Price,-15}");
+        }
+        public virtual void PrintInfo()
         {
             Console.WriteLine($"{Make,-15} {Model,-15} {Year,-15} {Price,-15}");
         }
