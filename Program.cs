@@ -82,7 +82,7 @@ namespace Bonus16
                     }
                   catch (Exception e)
                     {
-                        //if no add an exception
+                        Console.ReadKey();//if no add an exception
                     }
                 }
                 Console.WriteLine("Do you want to view another car? Y/N");

@@ -48,10 +48,10 @@ namespace Bonus16
         // default constructor (takes no param)
         public Car()
         {
-            Make = "not assigned";
-            Model = "not assigned";
-            Year = 2018;
-            Price = 40000;
+            Make = "Make";
+            Model = "Model";
+            Year = 0000;
+            Price = 00000;
         }
 
         // overload constructor 
