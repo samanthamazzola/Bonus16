@@ -19,7 +19,7 @@ namespace Bonus16
         {
             Lot = new List<Car>();
         }
-        public CarLot(List<Car> cars) //taking the Car list and 
+        public CarLot(List<Car> cars) //taking the Car list 
         {
             Lot = cars;
         }

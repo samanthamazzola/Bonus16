@@ -36,10 +36,7 @@ namespace Bonus16
         //   Console.WriteLine($"{Mileage, -5}");
         //}
 
-        public override void ToString()
-        {
-            Console.WriteLine($"{Make,-5} {Model,-5} {Year,-5} {Price,-5} (Used){Mileage,-5}");
-        }
+      
         public override void PrintInfo()
         {
             

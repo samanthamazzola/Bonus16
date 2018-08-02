@@ -66,11 +66,6 @@ namespace Bonus16
         // method from main class
         // virtual method
 
-
-        public virtual void ToString()
-        {
-            Console.WriteLine($"{Make,-15} {Model,-15} {Year,-15} {Price,-15}");
-        }
         public virtual void PrintInfo()
         {
             Console.WriteLine($"{Make,-15} {Model,-15} {Year,-15} {Price,-15}");

@@ -33,9 +33,6 @@ namespace Bonus16
             CarLot carlotlist = new CarLot(cars); // create CarList from Car list info
 
 
-
-
-
             while (true)
             {
                 Console.Clear();
@@ -66,6 +63,7 @@ namespace Bonus16
                             {
                                 c.PrintInfo();
                                 Console.WriteLine();
+                                carlotlist.Lot.RemoveAt(int.Parse(input) - 1);
                             }
                         }
                     }
