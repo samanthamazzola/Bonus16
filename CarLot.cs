@@ -29,5 +29,17 @@ namespace Bonus16
         {
             Lot.RemoveAt(input); //removes at specific index input 
         }
+        public void Insert(int input) 
+        {
+            Lot.Insert(input); //insert at specific spot
+        }
     }
 }
+
+
+//List<T> someList = new List();
+//someList.Add(x)        // Adds x to the end of the list
+//someList.Insert(0, x)  // Adds x at the given index
+ //someList.Remove(x)     // Removes the first x observed
+ //someList.RemoveAt(0)   // Removes the item at the given index
+ //someList.Count()       // Always good to know how many elements you have!

@@ -52,7 +52,7 @@ namespace Bonus16
                     Console.WriteLine("=================================");
                     Console.WriteLine("Please choose a vehicle number from the list above: ");
                 }
-                if (carlotlist.Lot.Count() > 0) //if you still have inventory 
+                if (carlotlist.Lot.Count() > 0) //if you still have inventory //.count tells how many in the list
                 {
                     try
                     {
@@ -65,18 +65,31 @@ namespace Bonus16
                                 Console.WriteLine();
                                 carlotlist.Lot.RemoveAt(int.Parse(input) - 1);
                             }
+                             
+                            Console.WriteLine("Would you like to view another car, or add a new vehicle to inventory? Choose 'view' or 'add':");
+                            string userChoice =Console.ReadLine(); // takes in user answer of view or add
+                            {
+                                if (userChoice.ToLower()=="view")
+                                {
+                                    continue;
+                                }
+                                if (userChoice.ToLower() == "add")
+                                {
+                                    carlotlist.Lot.Insert(int.Parse(input) -1);
+                                }
+                            }
                         }
                     }
-                    catch (Exception e)
+                  catch (Exception e)
                     {
-                        // if no add an exception
+                        //if no add an exception
                     }
                 }
                 Console.WriteLine("Do you want to view another car? Y/N");
                 string choice = Console.ReadLine();
                 if (choice.ToLower() == "n") //so it doesn't matter if it's lower case or uppper case input
                     break;
-
+                
                 Console.Clear();
                 // print car list method?
                 Console.WriteLine("Current Inventory: ");

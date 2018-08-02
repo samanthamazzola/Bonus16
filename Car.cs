@@ -70,5 +70,18 @@ namespace Bonus16
         {
             Console.WriteLine($"{Make,-15} {Model,-15} {Year,-15} {Price,-15}");
         }
+
+        public void RemoveAt()
+        {
+            
+        }
+        public void Insert(int input)
+        {
+            Lot.Insert(input); //insert at specific spot
+        }
+        //public void List<Car>InsertAt(int index, Car item)
+        //{
+        //    (int.Parse(input) + 1);
+        //}
     }
 }
