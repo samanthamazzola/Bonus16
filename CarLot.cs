@@ -23,5 +23,11 @@ namespace Bonus16
         {
             Lot = cars;
         }
+
+        //method
+        public void RemoveAt(int input) //method to remove car.... calling in the main
+        {
+            Lot.RemoveAt(input); //removes at specific index input 
+        }
     }
 }
