@@ -29,10 +29,14 @@ namespace Bonus16
         {
             Lot.RemoveAt(input); //removes at specific index input 
         }
-        public void Insert(int input) 
+        public void Insert(int input)
         {
             Lot.Insert(input); //insert at specific spot
         }
+        //public void Insert(int input) 
+        //{
+        //    Lot.Insert(input); //insert at specific spot
+        //}
     }
 }
 

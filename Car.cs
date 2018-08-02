@@ -75,10 +75,7 @@ namespace Bonus16
         {
             
         }
-        public void Insert(int input)
-        {
-            Lot.Insert(input); //insert at specific spot
-        }
+
         //public void List<Car>InsertAt(int index, Car item)
         //{
         //    (int.Parse(input) + 1);
